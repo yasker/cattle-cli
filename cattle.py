@@ -34,6 +34,9 @@ class Client(gdapi.Client):
 
         return obj
 
+    def close(self):
+        self._session.close()
+
 
 def _get_timeout(timeout):
     if timeout == -1:
